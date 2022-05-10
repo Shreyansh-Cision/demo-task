@@ -18,6 +18,7 @@
         <spring-cloud.version>2021.0.1</spring-cloud.version>
         <!--        <stream-apps-common.version>3.0.3</stream-apps-common.version>-->
         <prometheus-rsocket-spring.version>1.4.0</prometheus-rsocket-spring.version>
+        <spring-context.version>5.3.17</spring-context.version>
     </properties>
     <dependencies>
         <dependency>
@@ -71,6 +72,25 @@
             <groupId>io.micrometer.prometheus</groupId>
             <artifactId>prometheus-rsocket-spring</artifactId>
             <version>${prometheus-rsocket-spring.version}</version>
+        </dependency>
+
+        <!-- In memory database -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- rest template-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-context.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-context.version}</version>
         </dependency>
 
     </dependencies>
